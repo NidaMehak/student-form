@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration-form</title>
+<style>
+ body {
+    font-family: Arial;
+ }
+ .form-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: rgb(207, 221, 219);
+    padding: 20px;
+    border-radius: 7px;
+    height: fit-content;
+ }
+ .row {
+    display: flex;
+ }
+ .box {
+    flex: 1;
+    margin-right: 10px;
+}
+ input,select {
+    width: 100%;
+    padding: 10px;
+    border: 1.5px solid black;
+   border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+ }
+ textarea{
+    width: 100%;
+    height: 150px;
+ }
+ .submit{
+    background-color: #27313410;
+    padding: 12px 20px;
+    margin: 10px;
+    margin-right: 500px;
+    border-radius: 6px; 
+ }
+ .clear {
+    background-color: #27313410;
+    padding: 12px 20px;
+    margin: -15px;
+    border-radius: 6px;
+ }
+ .required{
+    color: rgb(111, 6, 6);
+ }
+ </style>
+</head>
+<body>
+ <div class="form-container">
+    <h1>Student Regisration form</h1>
+    <p>Fill out the form carefully for registration</p>
+    <h3>STUDENT NAME:</h3>
+    <form id="registration-form" action="Submit" method="Post">
+        <div class="row">
+            <div class="box">
+                <label for="First Name"  class="required">First Name:</label>
+                <input type="text" name="First name" maxlength="20" required pattern="[A-Za-z]"
+                    placeholder=" Enter First name">
+            </div>
+            <div class="box">
+                <label for="Middle Name"  class="required">Middle Name:</label>
+                <input type="text" name="Middle name" maxlength="20" required pattern="[A-Za-z]"
+                    placeholder="Enter Middle name">
+            </div>
+            <div class="box">
+                <label for="Last Name"  class="required">Last Name:</label>
+                <input type="text" name="Last name" maxlength="20" required pattern="[A-Za-z]"
+                    placeholder="Enter Last name">
+            </div>
+            
+        </div>
+
+        <div class="row">
+            <div style="display: flex;">
+            <label for="Date of birth"  class="required">Date of birth:</label>
+            <span style="width: fit-content;">
+            <br>
+            <label for="month">Month</label>
+                <select> 
+                    <option value="">Month</option>
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+        
+                </select>
+            </span>
+            <span style="width: 20%;"><br>
+                <label for="day">Day</label>
+                <input type="number"  min="1" max="31" required></span>
+            <span style="width: 20%;"><br>
+                <label for="year">Year</label>
+                <input type="number"  name="year" min="1970" max="2024" required></span>
+                
+        </div>
+        <div>
+            <br>
+            <label for="Gender" class="required">Gender:</label>
+            <select  name="gender" required>
+                <option value="">Select gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        </div>
+      </div>
+       
+       
+        <div>
+            <h2>Address</h2>
+            <label for="Address" class="required"> ST Address:</label>
+            <input type="text" maxlength="250" required placeholder="Enter Address">
+            <br><br>
+            <label for="Address" class="required"> St-Address-line 2:</label>
+            <input type="text"  maxlength="250" required placeholder="Enter ST-Address">
+            <br><br>
+        </div>
+        <div class="row">
+            <div class="box">
+                <label for="city" class="required">City:</label>
+                <input type="text"  name="city" maxlength="50" required placeholder="Enter City">
+            </div>
+            <div class="box">
+                <label for="state" class="required">State/Province:</label>
+                <input type="text" name="state" maxlength="50" required placeholder="Enter State/Province">
+                <br><br>
+            </div>
+        </div>
+        <div class="block">
+            <label for="Zip-code" class="required">Zip-code</label>
+            <input type="text" name="zip-code" maxlength="5" required pattern="[0-9]{5}" placeholder="Enter zip-code">
+            <br><br>
+        </div>
+        <div class="row">
+            <div class="box">
+                <lable for="email" class="required">Student E-mail</lable>
+                <input type="email"  name="email" maxlength="250" required placeholder="ex:myname@example.com">
+            </div>
+            <div class="box">
+                <label for="Mobile number">Mobile number</label>
+                <input type="number"  name="mobile-number" maxlength="12" pattern="[0-9]{10,12}" placeholder="(000)000-0000">
+                <br><Br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="box">
+                <label for="Phone number">Phone number</label>
+                <input type="number"  name="phone-number" maxlength="12" pattern="[0-9]{10,12}" placeholder="(000)000-0000">
+            </div>
+            <div class="box">
+                <label for="work number">work number</label>
+                <input type="number"  name="work-number" maxlength="12" pattern="[0-9]{10,12}" placeholder="(000)000-0000">
+            </div>
+        </div>
+        <div>
+            <br>
+            <label for="company" class="required">Company:</label>
+            <input type="text"  name="company" maxlength="150" required>
+            
+        </div>
+        <div class="box">
+            <br>
+            <label for="courses" class="required">Courses:</label>
+            <select id="courses" required>
+                <option value=""> Please Select </option>
+                <option value=" 1">Course 1</option>
+                <option value="2">Course 2</option>
+                <option value="3">Course 3</option>
+                <option value="4">Course 4</option>
+                <option value="5">Course 5</option>
+                <option value="6">Course 6</option>
+                <option value="7">Course 7</option>
+                <option value="8">Course 8</option>
+                <option value="9">Course 9</option>
+                <option value="10">Course 10</option>
+            </select>
+        </div>
+        <div>
+            <br>
+            <label for="message">Additional Message:</label><br>
+            <textarea  name="additional-comments" maxlength="300" placeholder="Enter Aditional Message"></textarea>
+            <br>
+        </div>
+        <button class="submit">Submit</button>
+        <button class="clear">Clear Fields</button>
+    
+    </form>
+ </div>
+</body>
+</html>
